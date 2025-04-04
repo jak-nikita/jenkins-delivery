@@ -1,9 +1,9 @@
 def clonePythonGreetingsRepo() {
-    git 'https://github.com/mtararujs/python-greetings'
+    git branch: 'main', url: 'https://github.com/mtararujs/python-greetings'
 }
 
 def cloneCourseJsApiFrameworkRepo() {
-    git 'https://github.com/mtararujs/course-js-api-framework'
+    git branch: 'main', url: 'https://github.com/mtararujs/course-js-api-framework'
 }
 
 def deployToEnvironment(environment, port) {
