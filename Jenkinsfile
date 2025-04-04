@@ -10,7 +10,7 @@ def deployToEnvironment(environment, port) {
     echo "Deploying to $environment environment..."
     clonePythonGreetingsRepo()
     sh "pm2 delete greetings-app-$environment || true"
-    sh "pm2 start app.py --name greetings-app-$environment --port $port"
+    sh "pm2 start app.py --name greetings-app-$environment -- --port $port"
 }
 
 def runTestsOnEnvironment(environment) {
